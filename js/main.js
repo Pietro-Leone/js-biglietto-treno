@@ -7,6 +7,11 @@ const currentMonth = date.getUTCMonth() + 1;
 const currentYear = date.getFullYear();
 const currentDate = ` ${currentDay}/${currentMonth}/${currentYear} `
 
+// Validazione dati inseriti
+if (isNaN(kilometers) || kilometers <= 0 || isNaN(userAge)) {
+    alert("Ricarica la pagina e inserisci dei dati validi");
+}
+
 document.getElementById("date").innerHTML = `${currentDate}`
 
 // Calcolo kilometri * prezzo al kilometro
